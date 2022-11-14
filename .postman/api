@@ -11,7 +11,7 @@ files[] = {"id":"20670655-a04baddc-006e-461c-98f6-bdcd9b515ef0","path":"pm api.j
 
 [relations.apiDefinition]
 rootDirectory = postman/schemas
-files[] = {"path":"one/index.yaml","metaData":{}}
+files[] = {"path":"tw/one/index.yaml","metaData":{}}
 
 [relations.apiDefinition.metaData]
 type = openapi:3
