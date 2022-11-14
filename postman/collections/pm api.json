@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "a04baddc-006e-461c-98f6-bdcd9b515ef0",
+		"name": "pm api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "20670655-a04baddc-006e-461c-98f6-bdcd9b515ef0"
+	},
+	"item": [
+		{
+			"name": "get worspaces",
+			"id": "b1898f3f-11c3-4fbc-98ed-870d7a1076bd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{postmanapikey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/workspaces",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"workspaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get collections",
+			"id": "8d09046d-189b-419d-8ee2-74c93f5a9d2b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{postmanapikey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/collections",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"collections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get env",
+			"id": "1440e2f1-245e-461e-8a54-ba42db905e7f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{postmanapikey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/collections",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"collections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create webhook",
+			"id": "80c1d9a9-82cf-419b-9c68-b749f300a638",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{postmanapikey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-workspace-id",
+						"value": "{{workspaceId}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"webhook\":{\n        \"name\": \"Register user webhook\",\n        \"collection\": \"{{registeruserCollectionId}}\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.getpostman.com/webhooks?workspace={{workspaceId}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"webhooks"
+					],
+					"query": [
+						{
+							"key": "workspace",
+							"value": "{{workspaceId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
