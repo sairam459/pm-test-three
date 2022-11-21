@@ -1,53 +1,143 @@
 {
 	"info": {
-		"_postman_id": "a04baddc-006e-461c-98f6-bdcd9b515ef0",
+		"_postman_id": "323cc490-e13d-4288-95ae-1096951210d0",
 		"name": "pm api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "20670655-a04baddc-006e-461c-98f6-bdcd9b515ef0"
+		"_uid": "940256-323cc490-e13d-4288-95ae-1096951210d0"
 	},
 	"item": [
 		{
-			"name": "get worspaces",
-			"id": "b1898f3f-11c3-4fbc-98ed-870d7a1076bd",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "{{postmanapikey}}",
-							"type": "string"
+			"name": "test",
+			"item": [
+				{
+					"name": "get worspaces",
+					"id": "1bc33774-47b3-418b-b918-26ed062129a8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{postmanapikey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-api-key",
+									"type": "string"
+								}
+							]
 						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.getpostman.com/workspaces",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"workspaces"
+							]
+						}
+					},
+					"response": [
 						{
-							"key": "key",
-							"value": "X-api-key",
-							"type": "string"
+							"id": "92b38e1b-cec1-44ca-b680-0fcedaaee5e5",
+							"name": "get worspaces",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.getpostman.com/workspaces",
+									"protocol": "https",
+									"host": [
+										"api",
+										"getpostman",
+										"com"
+									],
+									"path": [
+										"workspaces"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 21 Nov 2022 12:46:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=df62f9689f0a0487"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=6a411f303fb794ea"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "400"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "399"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1669034822"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"78-WpLmxRlFkKKPPDh/y4B5Gn3NuSs\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"name\": \"AuthenticationError\",\n        \"message\": \"Invalid API Key. Every request requires a valid API Key to be sent.\"\n    }\n}"
 						}
 					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://api.getpostman.com/workspaces",
-					"protocol": "https",
-					"host": [
-						"api",
-						"getpostman",
-						"com"
-					],
-					"path": [
-						"workspaces"
-					]
 				}
-			},
-			"response": []
+			],
+			"id": "ab8e166a-fdfa-4a0b-917b-90ea11249191"
 		},
 		{
 			"name": "get collections",
-			"id": "8d09046d-189b-419d-8ee2-74c93f5a9d2b",
+			"id": "8f5d525d-4498-4479-ab58-3ac35e64a9a3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -86,7 +176,7 @@
 		},
 		{
 			"name": "get env",
-			"id": "1440e2f1-245e-461e-8a54-ba42db905e7f",
+			"id": "89323f6d-3b6d-42d1-8465-0a228ab8ff75",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -125,7 +215,7 @@
 		},
 		{
 			"name": "create webhook",
-			"id": "80c1d9a9-82cf-419b-9c68-b749f300a638",
+			"id": "5c772617-14b8-4d26-a825-4d7dc2a56bd7",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
